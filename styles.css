@@ -1323,44 +1323,52 @@ aside .top .logo span.blue {
     }
   }
   
-  @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
     /* Ensure the container is visible and positioned correctly */
     .profile-container {
-      width: 95% !important;  /* Expands the width to 95% of the screen */
-      max-width: 500px !important;  /* Ensures it doesn't stretch too much */
-      margin: 0 auto !important;
-        padding: 1rem;
-        margin: 1rem auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; /* Center align */
-        box-sizing: border-box;
-        position: relative; /* Ensure proper positioning */
-        left: 50px;
-    }
+            width: 350px !important;  /* Makes it take the full width of the viewport */
+            max-width: 400px !important;  /* Ensures it stays within the screen */
+            margin: 0 !important;  /* Removes any margins */
+            padding: 1rem;  /* Adds some padding for better spacing */
+            box-sizing: border-box;  /* Prevents overflow due to padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center align */
+            position: relative; /* Ensure proper positioning */
+            left: 10px;
+        }
+      }
   
-    /* Form buttons: Side by side & smaller */
-    .form-buttons {
-        width: 100%;
-        display: flex;
-        flex-direction: row; /* Side by side */
-        justify-content: space-between; /* Add spacing */
-        gap: 5px;
-        position: relative; /* Prevent them from being pushed out */
+      @media screen and (max-width: 768px) {
+        .form-buttons {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Space between buttons */
+            position: relative;
+            left: 50px; /* Move it to the center */
+            transform: translateX(-50px); /* Shift it back by 50% of its own width */
+        }
+    
+        .form-buttons button {
+            width: auto; /* Keep buttons responsive */
+            padding: 8px 12px;
+            font-size: 14px;
+        }
     }
+    
+    
   
-    .form-buttons button {
-        width: 48%; /* Each button takes half width */
-        font-size: 12px;
-        padding: 8px;
-        display: block; /* Ensure visibility */
-    }
-  }
-  @media screen and (max-width: 768px) {
-    aside {
-        margin-top: 30px; 
-        margin-left: -15px;
+  
+  @media screen and (min-width: 769px) {
+    .profile-container {
+        width: 1000px;  /* Increase width for large screens */
+        max-width: 1300x;  /* Set a reasonable max width */
+        margin: 2rem auto;  /* Center the container */
+        padding: 1.5rem;  /* Add some spacing */
+        margin-left: 50px;
+        margin-top: -10px;
     }
   }
   
